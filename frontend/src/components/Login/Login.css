@@ -1,0 +1,34 @@
+.login{
+    max-width:400px;
+    margin:40px auto;
+    padding:20px 20px ;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 2px 5px 2px gray;
+    /* border: 1px solid black; */
+}
+.login input{
+    padding:10px 2px;
+    border-radius :5px;
+    font-size: 16px;
+}
+.login label{
+    font-size:20px;
+    font-size: 500;
+   padding: 10px 0;
+}
+.login button{
+    width:100px;
+    padding:10px 1px ;
+    margin-top:30px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    font-weight: 700; 
+    background-color: rgb(89, 169, 255); 
+}
+.login button:hover{
+    cursor: pointer;
+}

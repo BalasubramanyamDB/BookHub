@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Righteous&display=swap');
+.navbar{
+    display:flex;
+    box-sizing:0; 
+    justify-content:space-between;
+    padding-top: 10px;
+
+}
+.navbar-left img{
+   width:70px;
+   height: 60px;
+}
+.bookhub{
+     margin-top:-10px; 
+     padding-left: 25px;
+     color: black;
+     font-family: 'Luckiest Guy', cursive;
+}
+
+.nav-left-comp{
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+}
+.navbar-right{
+    justify-self: center;
+    display: flex;
+}
+.bookhub{
+    text-decoration: none;
+}
+.bookhub-right{
+    text-decoration: none;
+    padding-right: 20px; 
+    padding-left: 10px;
+    color: black;   
+}
+.bookhub-right p {
+    font-size:20px;
+}
+.bookhub-right p:hover{
+    border-bottom: 2px solid black;
+    transform: scale(1.05);
+    padding-bottom: 2px;
+    font-weight: 600;
+}
