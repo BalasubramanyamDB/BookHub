@@ -13,7 +13,7 @@ const Modal=({show,item,onClose})=>{
     let rating = (item.volumeInfo.rating ) 
     let id = item.id
     if (rating === undefined){
-        rating = id // need to change
+        rating = 'N/A'// need to change
     }  
     let category = item.volumeInfo.category
     if (category === undefined){

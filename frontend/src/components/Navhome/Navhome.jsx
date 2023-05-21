@@ -36,7 +36,7 @@ const Navhome = () => {
           
             <Link to='/fav' className="bookhub-right"> <p>Favourites</p> </Link>
             {/* <Link to='/' className="bookhub-right"> <p>Cart</p> </Link> */}
-            <Link to='/' className="bookhub-right"> <p>Recommend</p> </Link>
+            <Link to='/recommend' className="bookhub-right"> <p>Recommend</p> </Link>
             {!user && (<div> <Link to='/signup' className="bookhub-right"><p>Signup</p></Link></div>)}
             {user && (<div> <span>{user.email}</span> <button onClick={handleClick}>Log out</button></div>)}
         </div>
