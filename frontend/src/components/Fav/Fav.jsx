@@ -37,15 +37,11 @@ catch (error) {
     console.log(error);
 }
 }
-   
-
   return (
     <>
         <Navhome></Navhome>
         <div className="book-container">
             {
-                
-
                 bookData && bookData.map((item) => {
 
                     <>key={item.id}</>

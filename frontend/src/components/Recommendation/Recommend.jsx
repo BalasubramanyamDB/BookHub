@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Navbar from '../Navbar/Navbar'
+import Navhome from "../Navhome/Navhome";
 import { useState } from 'react'
 import axios from 'axios'
 import '../Card/Card.css';
@@ -31,52 +31,54 @@ const Recommend = () => {
 
   return (
     <div>
-        <Navbar></Navbar>
+        <Navhome></Navhome>
+
         <div className="choices">
-        <label>
-          <h1>Genre</h1>
+        <label id='label-ch'>
+          <h2>Genre</h2>
           <input type="radio" value=" best Fiction" checked={radioInput === 'Fiction'} onChange={handleChange}/>
           Fiction
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="psycology" checked={radioInput === 'psycology'} onChange={handleChange}/>
           Psycology
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="Thiller" checked={radioInput === 'Thiller'} onChange={handleChange}/>
           Thiller
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="Sci-fi" checked={radioInput === 'Sci-Fi'} onChange={handleChange}/>
           Sci-Fi
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="Novel" checked={radioInput === 'Novel'} onChange={handleChange}/>
           Novel
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="classics" checked={radioInput === 'classics'} onChange={handleChange}/>
           Classics
         </label>
-        <h1>Age group</h1>
-        <label>
+        <h2>Age group</h2>
+        <label id='label-ch'>
           <input type="radio" value="toodler" checked={radioInput === 'toodler'} onChange={handleChange}/>
           Toodler
         </label> 
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="kids" checked={radioInput === 'kids'} onChange={handleChange}/>
           Kids Books
         </label> 
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="Teen" checked={radioInput === 'Teen'} onChange={handleChange}/>
           Teens
         </label>
-        <label>
+        <label id='label-ch'>
           <input type="radio" value="history" checked={radioInput === 'history'} onChange={handleChange}/>
           Adult
         </label>          
         </div>
-
+        <br />
+        <h1 id="description">Bestseller</h1>
         <div className="book-container">
             {
             
@@ -88,7 +90,10 @@ const Recommend = () => {
                     if(thumbnail!== undefined && amount !==undefined)
                     {
                         return (
+              
+                          
                             <div className ="container">
+                              
                             <div className="card" onClick={()=>{setShow(true);setItem(item)}}>
                                 <img src = {thumbnail} alt="" />
                                 <div className="bottom">
