@@ -18,13 +18,10 @@ export const AuthContextProvider = ({ children})=>{
     const [state,dispatch] = useReducer(authReducer,{
         user : null
     })
-    // const[data,setData] = useState([])
+    
 
     useEffect(()=>{
-        // const valid = fetch(`http://localhost:5000/login/${user.email}`)
-        // .then(res=>res.json())
-        // .then(data => setData(data))
-        // .catch(err=>console.log(err))
+        
         const user = JSON.parse(localStorage.getItem('user'))
 
         if (user){
