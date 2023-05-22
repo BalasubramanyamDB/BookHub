@@ -59,37 +59,13 @@ const addFav = async (req, res) => {
         await user.save();
         res.status(200).json(user);
       } else {
-        res.status(400).json({ msg: "already liked" });
+        res.status(400).json({ msg: "already saved" });
       }
     } catch (e) {
       res.status(500).json({ msg: e.message });
     }
   }
   
-const removeFav = async (req, res) => {
-uid = req.body.user;
-try {
-const user = await User.findOne({email: uid});
-console.log(user);
-if (!user.fav.includes(req.body.item)) {
-  console.log(user.fav);
-  res.status(400).json({ msg: "post not liked" });
-} else {
-  console.log(user.fav);
-  for (var i = 0; i < user.fav.length; i++) {
-    if (user.fav[i] === req.body.item) {
-      user.fav.splice(i, 1);
-      await user.save();
-      console.log(user.fav.length);
-    }
-  }
-  res.status(200).json({ msg: "post removed" });
-}
-} catch (e) {
-res.status(500).json({ msg: e.message });
-  }
-}
-
 const getFav =  async (req, res) => {
     console.log(req)
     uid = req.body.email;
