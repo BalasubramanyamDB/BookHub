@@ -25,7 +25,6 @@ function Navbar(){
             </div>
         </div>
         <div className="navbar-right">
-            {/* <Link to='/exp' className="bookhub-right"> <p>Explore</p> </Link> */}
             <Link to='/fav' className="bookhub-right"> <p>Favourites</p> </Link>
             <Link to='/recommend' className="bookhub-right"><p>Recommend</p> </Link>
             {!user && (<div> <Link to='/signup' className="bookhub-right"><p>Signup</p></Link></div>)}
