@@ -19,7 +19,7 @@ const Recommend = () => {
         searchBook(radioInput)
       },[radioInput])
       const searchBook=(book)=>{
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+book+'&key=AIzaSyAz2OF9CJyNsnyWBn8OR8ludDeYnP93vMM'+'&maxResults=40').then(console.log('fetched'))
+        axios.get('https://www.googleapis.com/books/v1/volumes?q='+book+'&key=env.key'+'&maxResults=40').then(console.log('fetched'))
         .then(res=>setData(res.data.items))
         .catch(err=>console.log(err))
   }
